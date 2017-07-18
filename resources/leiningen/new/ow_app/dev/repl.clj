@@ -10,5 +10,5 @@
 (defn stop-figwheel []
   (f/stop-figwheel!))
 
-(def start-browser-repl []
+(defn start-browser-repl []
   (f/cljs-repl))
