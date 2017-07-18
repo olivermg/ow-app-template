@@ -100,8 +100,7 @@
                 :jar true
                 :compiler {:output-to             "resources/public/compiled/js/{{shortname}}.js"
                            :output-dir            "target/browser-min"
-                           :optimizations         :advanced
-                           :externs               []}}]}
+                           :optimizations         :advanced}}]}
 
   :figwheel {:css-dirs ["resources/public/compiled/css"]
              :ring-handler repl/ring-handler
