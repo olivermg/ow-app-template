@@ -65,7 +65,7 @@
                                     "resources/public/compiled"]
 
   :main ^:skip-aot {{name}}.core
-  :uberjar-name "{{name}}.jar"
+  :uberjar-name "{{shortname}}.jar"
 
   :profiles {:dev {:dependencies [[figwheel "0.5.8"]
                                   [figwheel-sidecar "0.5.8"]
@@ -87,7 +87,7 @@
               [{:id "browser-dev"
                 :source-paths ["src/cljs" "src/cljc"]
                 :figwheel true
-                :compiler {:output-to             "resources/public/compiled/js/{{name}}.js"
+                :compiler {:output-to             "resources/public/compiled/js/{{shortname}}.js"
                            :output-dir            "resources/public/compiled/js"
                            :optimizations         :none
                            :source-map-timestamp  true
@@ -98,7 +98,7 @@
                {:id "browser-min"
                 :source-paths ["src/cljs" "src/cljc"]
                 :jar true
-                :compiler {:output-to             "resources/public/compiled/js/{{name}}.js"
+                :compiler {:output-to             "resources/public/compiled/js/{{shortname}}.js"
                            :output-dir            "target/browser-min"
                            :optimizations         :advanced
                            :externs               []}}]}
