@@ -43,13 +43,6 @@
                  ;;; auth:
                  [buddy "1.3.0"]
 
-                 ;;; date & time:
-                 [clj-time                    "0.12.0"] ;; for clj
-                 [com.andrewmcveigh/cljs-time "0.4.0"]  ;; for cljs
-
-                 ;;; crypto:
-                 [digest "1.4.5"]
-
                  ;;; logging:
                  [com.taoensso/timbre "4.4.0"]
                  ]
