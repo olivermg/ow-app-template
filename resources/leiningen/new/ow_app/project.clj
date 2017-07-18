@@ -17,7 +17,7 @@
                  [re-frame     "0.9.1"]           ;; browser program flow
 
                  ;;; http:
-                 [ring-core              "1.4.0"]  ;; basic middlewares
+                 [ring/ring-core         "1.4.0"]  ;; basic middlewares
                  [http-kit               "2.2.0"]  ;; http server
                  [ring/ring-defaults     "0.2.1"]  ;; common middlewares
                  [bk/ring-gzip           "0.1.1"]
