@@ -13,7 +13,7 @@
 
                  ;;; program flow / lifecycle:
                  [integrant    "0.4.1"]           ;; component lifecycle management
-                 [clj-starbuck "0.2.0-SNAPSHOT"]  ;; message based component communications
+                 [clj-starbuck "2.0.0-SNAPSHOT"]  ;; message based component communications
                  [re-frame     "0.9.1"]           ;; browser program flow
 
                  ;;; http:
