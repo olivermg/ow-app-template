@@ -13,7 +13,7 @@
   (main/info (str "Generating a new ow-app project named " name "..."))
   (let [main-ns (sanitize-ns name)
         data {:raw-name name
-              :project-name (project-name name)
+              :name (project-name name)
               :namespace main-ns
               :dirs (name-to-path main-ns)
               :year (year)}]
@@ -24,6 +24,14 @@
              ["LICENSE" (render "LICENSE" data)]
              [".gitignore" (render ".gitignore" data)]
              [".hgignore" (render ".hgignore" data)]
+             ["dev/repl.clj" (render "dev/repl.clj" data)]
+             ["resources/public/index.html" (render "resources/public/index.html" data)]
              "src/clj/{{dirs}}"
              "src/cljc/{{dirs}}"
-             "src/java/{{dirs}}")))
+             "src/cljs/{{dirs}}"
+             "src/java/{{dirs}}"
+             "src/less"
+             "resources/public/css"
+             "resources/public/js"
+             "resources/public/fonts"
+             "resources/public/img")))

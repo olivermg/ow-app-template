@@ -1,4 +1,4 @@
-(defproject {{project-name}} "0.1.0-SNAPSHOT"
+(defproject {{name}} "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -64,8 +64,8 @@
   :clean-targets ^{:protect false} [:target-path :compile-path
                                     "resources/public/compiled"]
 
-  :main ^:skip-aot {{project-name}}.core
-  :uberjar-name "{{project-name}}.jar"
+  :main ^:skip-aot {{name}}.core
+  :uberjar-name "{{name}}.jar"
 
   :profiles {:dev {:dependencies [[figwheel "0.5.8"]
                                   [figwheel-sidecar "0.5.8"]
@@ -87,7 +87,7 @@
               [{:id "browser-dev"
                 :source-paths ["src/cljs" "src/cljc"]
                 :figwheel true
-                :compiler {:output-to             "resources/public/compiled/js/{{project-name}}.js"
+                :compiler {:output-to             "resources/public/compiled/js/{{name}}.js"
                            :output-dir            "resources/public/compiled/js"
                            :optimizations         :none
                            :source-map-timestamp  true
@@ -98,7 +98,7 @@
                {:id "browser-min"
                 :source-paths ["src/cljs" "src/cljc"]
                 :jar true
-                :compiler {:output-to             "resources/public/compiled/js/{{project-name}}.js"
+                :compiler {:output-to             "resources/public/compiled/js/{{name}}.js"
                            :output-dir            "target/browser-min"
                            :optimizations         :advanced
                            :externs               []}}]}
