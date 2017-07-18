@@ -41,4 +41,5 @@
              ["resources/public/css/.gitkeep" (render ".gitkeep" data)]
              ["resources/public/js/.gitkeep" (render ".gitkeep" data)]
              ["resources/public/fonts/.gitkeep" (render ".gitkeep" data)]
-             ["resources/public/img/.gitkeep" (render ".gitkeep" data)])))
+             ["resources/public/img/.gitkeep" (render ".gitkeep" data)]
+             "checkouts")))
