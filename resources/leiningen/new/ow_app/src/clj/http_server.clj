@@ -9,8 +9,9 @@
   (let [handler (fn [req]
                   (or ((:api handlers) req)
                       ((:web handlers) req)))]
-    (assoc opts
-           :server (https/run-server handler opts))))
+    (-> opts
+        (assoc-in [:handlers :main] handler)
+        (assoc :server (https/run-server handler opts)))))
 
 (defmethod ig/halt-key! :{{name}}/http-server [_ {:keys [server stop-timeout] :as opts}]
   (info "stopping {{name}}/http-server" opts)

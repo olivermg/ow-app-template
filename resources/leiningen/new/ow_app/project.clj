@@ -12,9 +12,11 @@
                  [environ                   "1.0.3"]    ;; handling environment vars
 
                  ;;; program flow / lifecycle:
-                 [integrant    "0.4.1"]           ;; component lifecycle management
-                 [clj-starbuck "2.0.0-SNAPSHOT"]  ;; message based component communications
-                 [re-frame     "0.9.1"]           ;; browser program flow
+                 [integrant       "0.4.1"]           ;; component lifecycle management
+                 [clj-starbuck    "2.0.0-SNAPSHOT"]  ;; message based component communications
+                 [re-frame        "0.9.1"]           ;; browser program flow
+                 [spootnik/signal "0.2.0"]           ;; posix signal handling
+
 
                  ;;; http:
                  [ring/ring-core         "1.4.0"]  ;; basic middlewares
@@ -60,10 +62,11 @@
   :main ^:skip-aot {{name}}.core
   :uberjar-name "{{shortname}}.jar"
 
-  :profiles {:dev {:dependencies [[figwheel "0.5.8"]
-                                  [figwheel-sidecar "0.5.8"]
+  :profiles {:dev {:dependencies [[figwheel                "0.5.8"]
+                                  [figwheel-sidecar        "0.5.8"]
                                   [com.cemerick/piggieback "0.2.1"]
-                                  [org.clojure/tools.nrepl "0.2.12"]]
+                                  [org.clojure/tools.nrepl "0.2.12"]
+                                  [ring/ring-devel         "1.4.0"]]
                    :plugins [[lein-figwheel "0.5.8"]]
                    :source-paths ["dev"]
                    :repl-options {:init-ns repl
