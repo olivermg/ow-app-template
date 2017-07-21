@@ -6,10 +6,10 @@
   :min-lein-version "2.6.1"
 
   :dependencies [;;; core:
-                 [org.clojure/clojure       "1.8.0"]    ;; the language (jvm)
-                 [org.clojure/clojurescript "1.9.562"]  ;; the language (js)
-                 [org.clojure/core.async    "0.2.395"]  ;; async communication channels
-                 [environ                   "1.0.3"]    ;; handling environment vars
+                 [org.clojure/clojure       "1.9.0-alpha17"]    ;; the language (jvm)
+                 [org.clojure/clojurescript "1.9.562"]          ;; the language (js)
+                 [org.clojure/core.async    "0.3.443"]          ;; async communication channels
+                 [environ                   "1.0.3"]            ;; handling environment vars
 
                  ;;; program flow / lifecycle:
                  [integrant       "0.4.1"]           ;; component lifecycle management
@@ -19,7 +19,7 @@
 
 
                  ;;; http:
-                 [ring/ring-core         "1.4.0"]  ;; basic middlewares
+                 [ring/ring-core         "1.6.2"]  ;; basic middlewares
                  [http-kit               "2.2.0"]  ;; http server
                  [ring/ring-defaults     "0.2.1"]  ;; common middlewares
                  [bk/ring-gzip           "0.1.1"]
@@ -27,9 +27,10 @@
                  [ring.middleware.logger "0.5.0"]
 
                  ;;; api:
-                 [metosin/compojure-api "1.1.9"]   ;; rest api with swagger docs
-                 [liberator             "0.14.1"]  ;; correct http responses
-                 [ataraxy               "0.4.0"]   ;; bidirectional routing
+                 [metosin/compojure-api "2.0.0-alpha5"]   ;; rest api with swagger docs
+                 [metosin/spec-tools    "0.3.0"]          ;; for using clojure.spec as schema
+                 [liberator             "0.14.1"]         ;; correct http responses
+                 [ataraxy               "0.4.0"]          ;; bidirectional routing
 
                  ;;; html:
                  ;;; TODO: add preferred libs
@@ -66,7 +67,7 @@
                                   [figwheel-sidecar        "0.5.8"]
                                   [com.cemerick/piggieback "0.2.1"]
                                   [org.clojure/tools.nrepl "0.2.12"]
-                                  [ring/ring-devel         "1.4.0"]]
+                                  [ring/ring-devel         "1.6.2"]]
                    :plugins [[lein-figwheel "0.5.8"]]
                    :source-paths ["dev"]
                    :repl-options {:init-ns repl
