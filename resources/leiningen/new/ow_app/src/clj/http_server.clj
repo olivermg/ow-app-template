@@ -6,11 +6,15 @@
 (defmethod ig/init-key :{{name}}/http-server [_ {:keys [handlers] :as opts}]
   (info "starting {{name}}/http-server")
   (trace opts)
-  (let [api-handler (:api handlers)
-        web-handler (:web handlers)
+  (let [api-handler (some-> handlers :api :handler)
+        web-handler (some-> handlers :web :handler)
+        api-middlewares (or (some-> handlers :api :middlewares)
+                            identity)
+        web-middlewares (or (some-> handlers :web :middlewares)
+                            identity)
         handler (fn [req]
-                  (or (and api-handler (api-handler req))
-                      (and web-handler (web-handler req))))]
+                  (or (and api-handler ((api-middlewares api-handler) req))
+                      (and web-handler ((web-middlewares web-handler) req))))]
     (-> opts
         (assoc-in [:handlers :main] handler)
         (assoc :server (https/run-server handler opts)))))
