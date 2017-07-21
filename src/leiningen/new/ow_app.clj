@@ -36,6 +36,7 @@
              ["src/clj/{{dirs}}/core.clj" (render "src/clj/core.clj" data)]
              ["src/cljc/{{dirs}}/core.cljc" (render "src/cljc/core.cljc" data)]
              ["src/cljs/{{dirs}}/core.cljs" (render "src/cljs/core.cljs" data)]
+             ["src/cljs/{{dirs}}/events.cljs" (render "src/cljs/events.cljs" data)]
              ["src/less/main.less" (render "src/less/main.less" data)]
              ["src/java/{{dirs}}/.gitkeep" (render ".gitkeep" data)]
              ["resources/public/css/.gitkeep" (render ".gitkeep" data)]
