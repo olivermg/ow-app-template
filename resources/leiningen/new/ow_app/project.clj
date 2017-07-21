@@ -84,8 +84,10 @@
               [{:id "browser-dev"
                 :source-paths ["src/cljs" "src/cljc"]
                 :figwheel true
-                :compiler {:output-to             "resources/public/compiled/js/{{shortname}}.js"
+                :compiler {:main                  {{name}}.core
+                           :output-to             "resources/public/compiled/js/{{shortname}}.js"
                            :output-dir            "resources/public/compiled/js"
+                           :asset-dir             "/compiled/js"
                            :optimizations         :none
                            :source-map-timestamp  true
                            :print-input-delimiter true
@@ -95,7 +97,8 @@
                {:id "browser-min"
                 :source-paths ["src/cljs" "src/cljc"]
                 :jar true
-                :compiler {:output-to             "resources/public/compiled/js/{{shortname}}.js"
+                :compiler {:main                  {{name}}.core
+                           :output-to             "resources/public/compiled/js/{{shortname}}.js"
                            :output-dir            "target/browser-min"
                            :optimizations         :advanced}}]}
 
