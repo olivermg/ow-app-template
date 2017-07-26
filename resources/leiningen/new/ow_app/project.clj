@@ -47,7 +47,7 @@
                  [buddy "1.3.0"]
 
                  ;;; logging:
-                 [com.taoensso/timbre "4.4.0"]
+                 [com.taoensso/timbre "4.10.0"]
                  ]
 
   :plugins [[lein-cljsbuild "1.1.6"]
